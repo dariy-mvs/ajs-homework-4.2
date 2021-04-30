@@ -43,7 +43,7 @@ export default class Character {
         break;
       }
       default: {
-        return '';
+        console.log('default');
       }
     }
   }
@@ -66,10 +66,3 @@ export default class Character {
     this.health -= points * (1 - this.defence / 100);
   }
 }
-
-const A = new Character('aA', 'Magician');
-console.log(A);
-A.levelUp();
-console.log(A);
-A.damage(30);
-console.log(A);

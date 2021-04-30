@@ -62,3 +62,52 @@ test('Character', () => {
     return Person;
   }).toThrow('неправильный тип персонажа');
 });
+
+test('levelUp', () => {
+  const Person = new Character('Cat', 'Magician');
+  Person.levelUp();
+  expect(Person).toEqual({
+    name: 'Cat',
+    type: 'Magician',
+    health: 100,
+    level: 2,
+    attack: 12,
+    defence: 48,
+  });
+});
+test('levelUp', () => {
+  expect(() => {
+    const Person = new Character('Cat', 'Magician');
+    Person.health = 0;
+    return Person.levelUp();
+  }).toThrow('нельзя повысить level умершего');
+});
+test('damage', () => {
+  expect(() => {
+    const Person = new Character('Cat', 'Magician');
+    Person.health = -1;
+    return Person.damage(50);
+  }).toThrow('Персонаж уже умер');
+});
+test('damage', () => {
+  const Person = new Character('Cat', 'Magician');
+  Person.damage(50);
+  expect(Person).toEqual({
+    name: 'Cat',
+    type: 'Magician',
+    health: 70,
+    level: 1,
+    attack: 10,
+    defence: 40,
+  });
+});
+
+
+// {
+//   name: 'aA',
+//   type: 'Magician',
+//   health: 84.4,
+//   level: 2,
+//   attack: 12,
+//   defence: 48
+// }

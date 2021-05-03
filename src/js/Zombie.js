@@ -8,7 +8,7 @@ export default class Zombie extends Character {
     }
     this.attack = 40;
     this.defence = 10;
-    this.levelUp = this.levelUp.bind(this);
-    this.damage = this.damage.bind(this);
+    // this.levelUp = this.levelUp.bind(this);
+    // this.damage = this.damage.bind(this);
   }
 }

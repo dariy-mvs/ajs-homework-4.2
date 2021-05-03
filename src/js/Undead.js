@@ -9,7 +9,7 @@ export default class Undead extends Character {
     }
     this.attack = 25;
     this.defence = 25;
-    this.levelUp = this.levelUp.bind(this);
-    this.damage = this.damage.bind(this);
+    // this.levelUp = this.levelUp.bind(this);
+    // this.damage = this.damage.bind(this);
   }
 }

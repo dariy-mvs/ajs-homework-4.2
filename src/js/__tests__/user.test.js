@@ -69,49 +69,49 @@ test('Bowman', () => {
   }).toThrow('неправильный тип персонажа');
 });
 
-// test('levelUp', () => {
-//   const Char = new Bowman('Cat', 'Bowman');
-//   Char.levelUp();
-//   expect(Char).toEqual(expect.objectContaining({
-//     name: 'Cat',
-//     type: 'Bowman',
-//     level: 2,
-//     health: 100,
-//     attack: 30,
-//     defence: 30,
-//   }));
-// });
+test('levelUp', () => {
+  const Char = new Bowman('Cat', 'Bowman');
+  Char.levelUp();
+  expect(Char).toEqual({
+    name: 'Cat',
+    type: 'Bowman',
+    level: 2,
+    health: 100,
+    attack: 30,
+    defence: 30,
+  });
+});
 
-// test('levelUp', () => {
-//   expect(() => {
-//     const Person = new Bowman('jss');
-//     Person.health = -1;
-//     Person.levelUp();
-//     return Person;
-//   }).toThrow('нельзя повысить level умершего');
-// });
+test('levelUp', () => {
+  expect(() => {
+    const Person = new Bowman('jss');
+    Person.health = -1;
+    Person.levelUp();
+    return Person;
+  }).toThrow('нельзя повысить level умершего');
+});
 
-// test('damage', () => {
-//   const Char = new Bowman('Cat', 'Bowman');
-//   Char.damage(30);
-//   expect(Char).toEqual(expect.objectContaining({
-//     name: 'Cat',
-//     type: 'Bowman',
-//     level: 1,
-//     health: 77.5,
-//     attack: 25,
-//     defence: 25,
-//   }));
-// });
+test('damage', () => {
+  const Char = new Bowman('Cat', 'Bowman');
+  Char.damage(30);
+  expect(Char).toEqual({
+    name: 'Cat',
+    type: 'Bowman',
+    level: 1,
+    health: 77.5,
+    attack: 25,
+    defence: 25,
+  });
+});
 
-// test('damage', () => {
-//   expect(() => {
-//     const Person = new Bowman('jss');
-//     Person.health = -1;
-//     Person.damage(30);
-//     return Person;
-//   }).toThrow('Персонаж уже умер');
-// });
+test('damage', () => {
+  expect(() => {
+    const Person = new Bowman('jss');
+    Person.health = -1;
+    Person.damage(30);
+    return Person;
+  }).toThrow('Персонаж уже умер');
+});
 
 test('Swordsman', () => {
   const Char = new Swordsman('Cat');

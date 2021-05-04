@@ -16,12 +16,12 @@ import Undead from '../Undead';
 
 test('Character', () => {
   const Char = new Character('Cat', 'Bowman');
-  expect(Char).toEqual(expect.objectContaining({
+  expect(Char).toEqual({
     name: 'Cat',
     type: 'Bowman',
     level: 1,
     health: 100,
-  }));
+  });
 });
 
 test('Character', () => {
@@ -52,14 +52,14 @@ test('Character', () => {
 
 test('Bowman', () => {
   const Char = new Bowman('Cat', 'Bowman');
-  expect(Char).toEqual(expect.objectContaining({
+  expect(Char).toEqual({
     name: 'Cat',
     type: 'Bowman',
     level: 1,
     health: 100,
     attack: 25,
     defence: 25,
-  }));
+  });
 });
 
 test('Bowman', () => {
@@ -115,14 +115,14 @@ test('Bowman', () => {
 
 test('Swordsman', () => {
   const Char = new Swordsman('Cat');
-  expect(Char).toEqual(expect.objectContaining({
+  expect(Char).toEqual({
     name: 'Cat',
     type: 'Swordsman',
     level: 1,
     health: 100,
     attack: 40,
     defence: 10,
-  }));
+  });
 });
 test('Swordsman', () => {
   expect(() => {
@@ -133,14 +133,14 @@ test('Swordsman', () => {
 
 test('Zombie', () => {
   const Char = new Zombie('Cat');
-  expect(Char).toEqual(expect.objectContaining({
+  expect(Char).toEqual({
     name: 'Cat',
     type: 'Zombie',
     level: 1,
     health: 100,
     attack: 40,
     defence: 10,
-  }));
+  });
 });
 test('Zombie', () => {
   expect(() => {
@@ -151,14 +151,14 @@ test('Zombie', () => {
 
 test('Undead', () => {
   const Char = new Undead('Cat');
-  expect(Char).toEqual(expect.objectContaining({
+  expect(Char).toEqual({
     name: 'Cat',
     type: 'Undead',
     level: 1,
     health: 100,
     attack: 25,
     defence: 25,
-  }));
+  });
 });
 test('Undead', () => {
   expect(() => {
@@ -177,14 +177,14 @@ test('Daemon', () => {
 
 test('Daemon', () => {
   const Char = new Daemon('Cat');
-  expect(Char).toEqual(expect.objectContaining({
+  expect(Char).toEqual({
     name: 'Cat',
     type: 'Daemon',
     level: 1,
     health: 100,
     attack: 10,
     defence: 40,
-  }));
+  });
 });
 
 test('Magician', () => {
@@ -196,12 +196,12 @@ test('Magician', () => {
 
 test('Magician', () => {
   const Char = new Magician('Cat');
-  expect(Char).toEqual(expect.objectContaining({
+  expect(Char).toEqual({
     name: 'Cat',
     type: 'Magician',
     level: 1,
     health: 100,
     attack: 10,
     defence: 40,
-  }));
+  });
 });
